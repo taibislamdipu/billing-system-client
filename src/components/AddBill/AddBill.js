@@ -1,6 +1,11 @@
 import React from "react";
+import Modal from "../Modal/Modal";
 
 const AddBill = () => {
+  const handleAddBill = (state, props) => {
+    alert("clicked");
+  };
+
   return (
     <div>
       <div className="container d-flex justify-content-between align-items-center mt-5 bg-primary rounded">
@@ -14,7 +19,15 @@ const AddBill = () => {
           />
         </div>
         <div>
-          <button className="btn btn-dark">Add New Bill</button>
+          <button
+            type="button"
+            className="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add New Bill
+          </button>
+          <Modal />
         </div>
       </div>
 
